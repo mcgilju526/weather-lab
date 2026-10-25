@@ -1,0 +1,53 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f2f6fa;
+            color: #243447;
+        }
+
+        .dashboard {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌤️ Weather Lab</h1>
+    <p>Docker + NGINX + Flask + Redis</p>
+
+    <div class="dashboard">
+        <h2>Chicago Weather</h2>
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="result">Click the button to load weather.</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

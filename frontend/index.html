@@ -1,0 +1,37 @@
+cat > frontend/index.html <<'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Lab</title>
+</head>
+<body>
+
+    <h1>🌤️ Weather Lab</h1>
+    <p>Docker + NGINX + Flask + Redis</p>
+
+    <label for="city">City:</label>
+    <input
+        type="text"
+        id="city"
+        value="Chicago"
+        placeholder="Enter a city"
+    >
+
+    <button onclick="getWeather()">Search</button>
+
+    <br><br>
+
+    <label for="units">Temperature units:</label>
+    <select id="units" onchange="displayWeather()">
+        <option value="F" selected>Fahrenheit (°F)</option>
+        <option value="C">Celsius (°C)</option>
+    </select>
+
+    <pre id="result">Enter a city and click Search.</pre>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
